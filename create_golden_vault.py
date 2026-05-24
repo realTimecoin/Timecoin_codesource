@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 import subprocess
 import json
@@ -16,7 +17,7 @@ RPC_CONF = {
         "host": "127.0.0.1",
         "port": 26181,
         "user": "timecoin",
-        "password": "GoldenSpiral2026"
+        "password": os.getenv("TIMECOIN_RPC_PASSWORD", "test")
     }
 }
 
